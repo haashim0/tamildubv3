@@ -88,6 +88,6 @@ CAPTION_BUTTON_URL = "https://t.me/AMD_LinkZz"
    # Auto Delete For Bot Sending Files #
     
 #Shortner
-SHORTENER = environ.get('SHORTENER', "")
-SHORTENER_API = environ.get('SHORTENER_API', "")
-H_DOWNLOAD_LINK = environ.get('H_DOWNLOAD_LINK', "")
+SHORTENER = environ.get('SHORTENER', "amddisk.xyz")
+SHORTENER_API = environ.get('SHORTENER_API', "852a62dbf826aec6269b22c89c6283f367359460")
+H_DOWNLOAD_LINK = environ.get('H_DOWNLOAD_LINK', "https://t.me/AMD_Discussion/7514")
