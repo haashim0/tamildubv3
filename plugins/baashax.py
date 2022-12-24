@@ -1,12 +1,7 @@
 import requests
 
 import pyshorteners
-from Adarsh.vars import Config 
-
-SHORTENER = Config.SHORTENER 
-
-SHORTENER_API = Config.SHORTENER_API
-
+from info import SHORTENER, SHORTENER_API
 
 def short_url(longurl):
     if "shorte.st" in SHORTENER:
