@@ -1,8 +1,3 @@
-from os import environ
-from requests import get
-
-UPSTREAM_REPO = environ.get('UPSTREAM_REPO', '')
-
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
