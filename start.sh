@@ -1,7 +1,7 @@
 if [ -z $UPSTREAM_REPO ]
 then
   echo "Cloning main Repository"
-  git clone https://github.com/KingPhoenix06/Eva-Del_Url /Eva
+  git clone https://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@github.com/phoenixtgbot/FilterBot /main
 else
   echo "Cloning Custom Repo from $UPSTREAM_REPO "
   git clone $UPSTREAM_REPO /Eva
