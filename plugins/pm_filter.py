@@ -397,7 +397,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ]
                 short_markup = InlineKeyboardMarkup(shortbtn)
                 shorten_link = short_url(f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
-                await client.send_message(chat_id=query.from_user.id,text = f"<b>==> Title : {files.file_name}\n\n==> File_Size : {get_size(files.file_size)}, reply_markup=short_markup)
+                await client.send_message(chat_id=query.from_user.id,text = f"<b>==> Title : {files.file_name}\n\n==> File_Size : {get_size(files.file_size)}</b>", reply_markup=short_markup)
                 await query.answer('Check PM, I have sent files in pm', show_alert=True)
         except UserIsBlocked:
             await query.answer('You Are Blocked to use me !', show_alert=True)
