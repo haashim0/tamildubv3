@@ -86,3 +86,8 @@ CAPTION_BUTTON = "♻️ 𝗝ᴏɪɴ 𝗡ᴏᴡ ♻️"
 CAPTION_BUTTON_URL = "https://t.me/AMD_LinkZz"
 
    # Auto Delete For Bot Sending Files #
+    
+#Shortner
+SHORTENER = environ.get('SHORTENER', "")
+SHORTENER_API = environ.get('SHORTENER_API', "")
+H_DOWNLOAD_LINK = environ.get('H_DOWNLOAD_LINK', "")
