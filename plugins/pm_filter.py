@@ -390,6 +390,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 shortbtn = [
                     [
                         InlineKeyboardButton(text=f"Download Link", url=f"{shorten_link}")
+                    ],
+                    [
                         InlineKeyboardButton(text=f"How To Downlload", url=f"{H_DOWNLOAD_LINK}")
                     ]
                 ]
