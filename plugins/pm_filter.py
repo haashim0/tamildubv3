@@ -6,6 +6,7 @@ from utils import get_shortlink
 from pyrogram.errors.exceptions.bad_request_400 import MediaEmpty, PhotoInvalidDimensions, WebpageMediaEmpty
 from Script import script
 import pyrogram
+from baashax import short_url
 from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, \
     make_inactive
 from info import *
@@ -386,12 +387,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
                 return
             else:
-                await client.send_cached_media(
-                    chat_id=query.from_user.id,
-                    file_id=file_id,
-                    caption=f_caption,
-                    protect_content=True if ident == "filep" else False 
-                )
+                shorten_link = short_url(f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+                await client.send_message(chat_id=query.from_user.id,text = f"<b>==> Title : {files.file_name}\n\n==> File_Size : {get_size(files.file_size)}\n\n==> Download Link : {shorten_link}\n\n==>How To Download : {H_DOWNLOAD_LINK}</b>", disable_web_page_preview=True)
                 await query.answer('Check PM, I have sent files in pm', show_alert=True)
         except UserIsBlocked:
             await query.answer('You Are Blocked to use me !', show_alert=True)
